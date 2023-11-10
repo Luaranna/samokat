@@ -1,0 +1,6 @@
+SELECT c.login,
+       count(DISTINCT o.track)
+FROM "Orders" AS o
+INNER JOIN "Couriers" AS c ON c.id = "courierId"
+WHERE "inDelivery"=TRUE
+GROUP BY c.login;

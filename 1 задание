@@ -1,5 +1,0 @@
-SELECT "courierId",
-       count(DISTINCT track)
-FROM "Orders"
-WHERE "inDelivery"=TRUE
-GROUP BY "courierId";
